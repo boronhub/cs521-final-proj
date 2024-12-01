@@ -1,6 +1,6 @@
 "builtin.module"() ({
-  "memref.global"() <{alignment = 64 : i64, constant, initial_value = dense<12> : tensor<1xi64>, sym_name = "__constant_1xi64_0", sym_visibility = "private", type = memref<1xi64>}> : () -> ()
-  "memref.global"() <{alignment = 64 : i64, constant, initial_value = dense<27> : tensor<1xi64>, sym_name = "__constant_1xi64", sym_visibility = "private", type = memref<1xi64>}> : () -> ()
+  "memref.global"() <{alignment = 64 : i64, constant, initial_value = dense<12> : memref<1xi64>, sym_name = "__constant_1xi64_0", sym_visibility = "private", type = memref<1xi64>}> : () -> ()
+  "memref.global"() <{alignment = 64 : i64, constant, initial_value = dense<27> : memref<1xi64>, sym_name = "__constant_1xi64", sym_visibility = "private", type = memref<1xi64>}> : () -> ()
   "func.func"() <{function_type = () -> memref<1xi64>, sym_name = "main"}> ({
     %0 = "arith.constant"() <{value = 1 : index}> : () -> index
     %1 = "arith.constant"() <{value = 0 : index}> : () -> index
