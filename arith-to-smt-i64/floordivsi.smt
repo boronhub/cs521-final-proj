@@ -1,0 +1,8 @@
+(declare-datatypes ((Pair 2)) ((par (X Y) ((pair (first X) (second Y))))))
+(define-fun test ((x (Pair (_ BitVec 64) Bool)) (y (Pair (_ BitVec 64) Bool)) (tmp Bool)) (Pair (Pair (_ BitVec 64) Bool) Bool)
+  (let ((tmp_0 (first y))) 
+  (let ((tmp_1 (_ bv0 64))) 
+  (let ((tmp_2 (_ bv18446744073709551615 64))) 
+  (let ((tmp_3 (first x))) 
+  (let ((tmp_4 (bvsdiv tmp_3 tmp_0))) 
+  (pair (pair (ite (and (xor (bvslt tmp_3 tmp_1) (bvslt tmp_0 tmp_1)) (distinct (bvsrem tmp_3 tmp_0) tmp_1)) (bvadd tmp_4 tmp_2) tmp_4) (or (or (and (= tmp_3 (_ bv9223372036854775808 64)) (= tmp_0 tmp_2)) (= tmp_1 tmp_0)) (or (second x) (second y)))) tmp)))))))
